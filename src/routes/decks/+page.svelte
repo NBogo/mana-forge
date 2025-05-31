@@ -1,7 +1,7 @@
 <script>
   const { data } = $props();
   const { decks } = data;
-  import Navbar from '$lib/components/Navbar.svelte';
+  
 </script>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">

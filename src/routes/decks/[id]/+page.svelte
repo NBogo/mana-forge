@@ -7,7 +7,7 @@
     gesamtKarten += cards[i].count;
   }
 
-  import Navbar from '$lib/components/Navbar.svelte';
+  
 </script>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">

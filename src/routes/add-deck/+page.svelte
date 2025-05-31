@@ -5,7 +5,7 @@ let deckName = $state('');
 let deckDescription = $state('');
 let deckCards = $state([]);
 
-import Navbar from '$lib/components/Navbar.svelte';
+
 
 function addCard(card) {
     const existing = deckCards.find(c => c.card_id === card._id);
