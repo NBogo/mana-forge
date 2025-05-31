@@ -1,6 +1,6 @@
 # ManaForge - Magic Card Manager
 
-Bei dieser Anwendung handelt es sich, um eine WebApp die mit der Erstellung von neuen Decks im Spiel MtG helfen soll.
+ManaForge ist eine Webanwendung, die Spieler:innen von Magic: The Gathering bei der Erstellung und Verwaltung von Decks unterstützt.
 
 ## Live Demo
 
