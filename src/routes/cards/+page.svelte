@@ -1,6 +1,7 @@
 <script>
   const { data } = $props();
   const { cards } = data;
+  import Navbar from '$lib/components/Navbar.svelte';
 </script>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
@@ -9,14 +10,14 @@
       <img src="/logo.png" alt="ManaForge" height="32" class="me-2">
       ManaForge
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <div class="navbar-nav gap-2">
-        <a class="btn btn-light" href="/cards">
+        <a class="btn btn-outline-light" href="/cards">
           <i class="bi bi-collection"></i> Karten
         </a>
         <a class="btn btn-outline-danger" href="/add-card">

@@ -5,6 +5,8 @@ let deckName = $state('');
 let deckDescription = $state('');
 let deckCards = $state([]);
 
+import Navbar from '$lib/components/Navbar.svelte';
+
 function addCard(card) {
     const existing = deckCards.find(c => c.card_id === card._id);
     if (existing) {
@@ -17,6 +19,7 @@ function addCard(card) {
 function removeCard(card_id) {
     deckCards = deckCards.filter(c => c.card_id !== card_id);
 }
+
 </script>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
@@ -25,7 +28,12 @@ function removeCard(card_id) {
       <img src="/logo.png" alt="ManaForge" height="32" class="me-2">
       ManaForge
     </a>
-    <div class="collapse navbar-collapse justify-content-end">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <div class="navbar-nav gap-2">
         <a class="btn btn-outline-light" href="/cards">
           <i class="bi bi-collection"></i> Karten
@@ -36,7 +44,7 @@ function removeCard(card_id) {
         <a class="btn btn-outline-light" href="/decks">
           <i class="bi bi-stack"></i> Decks
         </a>
-        <a class="btn btn-danger" href="/add-deck">
+        <a class="btn btn-outline-danger" href="/add-deck">
           <i class="bi bi-plus-square"></i> Deck erstellen
         </a>
       </div>
