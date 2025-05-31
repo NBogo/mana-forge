@@ -1,38 +1,101 @@
-# sv
+# ManaForge - Magic Card Manager
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Bei dieser Anwendung handelt es sich, um eine WebApp die mit der Erstellung von neuen Decks im Spiel MtG helfen soll.
 
-## Creating a project
+## Live Demo
 
-If you're seeing this, you've probably already done this step. Congrats!
+Die Anwendung ist verfügbar unter: https://mana-forge.netlify.app
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Technologien
 
-# create a new project in my-app
-npx sv create my-app
+- Frontend: SvelteKit (Svelte 5 Runes Mode)
+- Backend: SvelteKit Server Actions  
+- Datenbank: MongoDB Atlas
+- Styling: Bootstrap 5 mit Bootstrap Icons
+- Deployment: Netlify
+
+## Funktionen
+
+### Kartenverwaltung
+- Alle Karten in einer Grid-Ansicht anzeigen
+- Neue Karten über Formular hinzufügen
+- Detailansicht einzelner Karten
+- Kartenbilder über URLs einbinden
+
+### Deck-Management
+- Decks durch interaktives Hinzufügen von Karten erstellen
+- Deck-Übersicht mit allen erstellten Decks
+- Detailansicht von Decks mit Statistiken
+- Automatische Berechnung von Deck-Metriken
+
+### Benutzeroberfläche
+- Responsive Design für Desktop und mobile Geräte
+- Funktionierendes Burger-Menü für Navigation
+- Dark Theme Design
+- Bootstrap-Komponenten für konsistentes Design
+
+## Projektstruktur
+
+```
+src/
+├── routes/
+│   ├── +page.svelte              # Startseite
+│   ├── cards/                    # Kartenverwaltung
+│   ├── add-card/                 # Karte hinzufügen
+│   ├── decks/                    # Deck-Verwaltung
+│   └── add-deck/                 # Deck erstellen
+├── lib/server/
+│   └── db.js                     # Datenbankfunktionen
+└── app.html                      # HTML Template
 ```
 
-## Developing
+## Datenbank Schema
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Cards Collection
+```javascript
+{
+  name: String,           // Kartenname
+  mana_cost: String,      // Mana-Kosten
+  type_line: String,      // Kartentyp
+  oracle_text: String,    // Kartenbeschreibung
+  colors: Array,          // Farben
+  image_url: String,      // Kartenbild URL
+  angriff: Number,        // Angriffswert
+  verteidigung: Number    // Verteidigungswert
+}
+```
+
+### Decks Collection
+```javascript
+{
+  name: String,           // Deckname
+  description: String,    // Beschreibung
+  cards: [{               // Karten im Deck
+    card_id: String,      // Karten-Referenz
+    count: Number         // Anzahl
+  }]
+}
+```
+
+## Installation
 
 ```bash
+# Repository klonen
+git clone https://github.com/NBogo/mana-forge.git
+
+# Dependencies installieren
+npm install
+
+# Environment Variables in .env setzen:
+# MONGODB_URI=mongodb+srv://...
+# MONGODB_DB=manaforge
+
+# Development Server starten
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Über das Projekt
 
-To create a production version of your app:
+Dieses Projekt wurde als Einzelarbeit im Modul Prototyping entwickelt. Es demonstriert die praktische Anwendung von HTML, CSS, JavaScript, SvelteKit und MongoDB zur Erstellung einer vollständigen Webanwendung.
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Die Anwendung erfüllt alle geforderten Anforderungen und geht mit zusätzlichen Features wie interaktivem Deck-Building und responsivem Design über die Mindestanforderungen hinaus.
