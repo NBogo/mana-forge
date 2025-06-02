@@ -17,7 +17,8 @@
       ManaForge
     </a>
     
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -29,7 +30,8 @@
         <a class="btn btn-outline-danger" href="/add-card">
           <i class="bi bi-plus-circle"></i> Karte hinzufügen
         </a>
-        <a class="btn btn-outline-light" href="/decks">
+        
+        <a class="btn btn-light" href="/decks">
           <i class="bi bi-stack"></i> Decks
         </a>
         <a class="btn btn-outline-danger" href="/add-deck">

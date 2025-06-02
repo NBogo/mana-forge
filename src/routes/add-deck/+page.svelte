@@ -29,7 +29,8 @@ function removeCard(card_id) {
       ManaForge
     </a>
     
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -44,7 +45,8 @@ function removeCard(card_id) {
         <a class="btn btn-outline-light" href="/decks">
           <i class="bi bi-stack"></i> Decks
         </a>
-        <a class="btn btn-outline-danger" href="/add-deck">
+      
+        <a class="btn btn-danger" href="/add-deck">
           <i class="bi bi-plus-square"></i> Deck erstellen
         </a>
       </div>
