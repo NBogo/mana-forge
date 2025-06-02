@@ -39,7 +39,7 @@
       Willkommen bei <span class="text-danger">ManaForge</span>
     </h1>
     <p class="lead text-secondary mb-5">
-      Deine persönliche Magic-Datenbank – verwalte Karten, erstelle Decks und finde dein nächstes Lieblingsspiel.
+      Deine persönliche Magic-Datenbank – verwalte Karten, erstelle Decks und finde dein nächstes Lieblingsdeck.
     </p>
   </div>
 
